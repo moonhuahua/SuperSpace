@@ -1,0 +1,22 @@
+#IfWinNotActive, AHK_CLASS CorelDRAW18|XLMAIN
+space up::
+if (A_PriorKey="space")
+	Send {space}
+Send {Space Up}
+return
+Space & Tab::Send {Space}
+
+Space & a::
+	MouseGetPos, X, Y
+	MouseMove, 266, 22, 0
+	Click 2
+	MouseMove, % X, % Y, 0
+	return
+Space & p::Send 1
+Space & h::Send {Left}
+Space & i::Send ^i			;——————
+Space & s::Send {Down}
+Space & w::Send {Up}
+Space & l::Send {Right}
+Space & q::Send !{Tab}
+#IfWinNotActive
